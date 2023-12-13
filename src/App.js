@@ -33,13 +33,13 @@ function App() {
 
       const data = await response.json();
       console.log("Received data from API:", data); 
-      if (data) {
-        console.log("Setting recipe:", data); 
+      if (data && typeof data === 'string') {
         setRecipe(data);
-        console.log("Recipe set"); 
       } else {
-        console.log("No valid data received");
+        console.log("Received non-string data:", data);
+    
       }
+      
     } catch (error) {
       console.error('Error:', error);
     } finally {
