@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
+
 function App() {
   const [ingredients, setIngredients] = useState('');
   const [quantity, setQuantity] = useState('');
@@ -51,6 +52,7 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Recipe Suggestion</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label>
